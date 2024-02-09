@@ -8,7 +8,7 @@ import "@styles/font-awesome.min.css";
 import "@styles/bs_53.css";
 import "@styles/swiper.min.css";
 import { useState } from 'react';
-import Modal from '@/components/Modal';
+import Modal from '@/components/modal';
 
 
 const SliderMain = () => {
