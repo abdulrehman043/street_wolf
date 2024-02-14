@@ -77,7 +77,7 @@ const MyForm = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 text-bg-light">
       <div className="row justify-content-center">
         <div className="col-md-8">
           <form onSubmit={handleSubmit}>
@@ -119,7 +119,7 @@ const MyForm = () => {
               <input type="text" className="form-control" id="courseName" name="courseName" value={formData.courseName} onChange={handleChange} required />
             </div>
             <div className="text-center">
-              <button type="submit" className="btn btn-primary">Submit</button>
+              <button type="submit" className="btn btn-primary">Get Free Consultancy</button>
             </div>
           </form>
           {submissionInfo.dateTime && (
@@ -131,23 +131,24 @@ const MyForm = () => {
             </div>
           )}
           {showSuccessModal && (
-            <div className="modal fade show" tabIndex="-1" role="dialog" style={{ display: 'block' }}>
+            <div className="modal fade show success-modal" tabIndex="-1" role="dialog" style={{ display: 'block' }}>
               <div className="modal-dialog">
                 <div className="modal-content">
-                  <div className="modal-header">
+                  <div className="modal-header bg-success text-white">
                     <h5 className="modal-title">Success!</h5>
-                    <button type="button" className="btn-close" onClick={closeModal}></button>
+                    <button type="button" className="btn-close text-white" onClick={closeModal}></button>
                   </div>
                   <div className="modal-body">
-                    <p>Your form has been submitted successfully.</p>
+                    <p>Your form has been submitted successfully. You will get a callback shortly.</p>
                   </div>
                   <div className="modal-footer">
-                    <button type="button" className="btn btn-primary" onClick={closeModal}>Close</button>
+                    <button type="button" className="btn btn-success" onClick={closeModal}>Close</button>
                   </div>
                 </div>
               </div>
             </div>
           )}
+
         </div>
       </div>
     </div>

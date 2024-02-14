@@ -10,13 +10,13 @@ const Modal = ({ showModal, onClose }) => {
 
   return (
     <div className={`z-index-9999 modal ${showModal ? 'show' : ''}`} tabIndex="-2" role="dialog" style={{ display: showModal ? 'block' : 'none' }}>
-      <div className="modal-dialog">
-        <div className="modal-content">
-          <div className="modal-header">
-            <h5 className="modal-title">Modal Tihhhtle</h5>
+      <div className="modal-dialog modal-dialog-centered">
+        <div className="modal-content rounded-3 shadow-lg">
+          <div className="modal-header bg-light">
+            <h5 className="modal-title text-dark">Register for Free Consultancy</h5>
             <button type="button" className="btn-close" onClick={closeModal}></button>
           </div>
-          <div className="modal-body">
+          <div className="modal-body text-bg-light">
             <MyForm closeModal={closeModal} />
           </div>
         </div>
