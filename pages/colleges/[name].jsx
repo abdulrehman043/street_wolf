@@ -22,7 +22,7 @@ const CollegePage = () => {
       let config = {
         method: 'post',
         maxBodyLength: Infinity,
-        url: 'http://139.59.66.116:3000/college/lists',
+        url: 'https://vidyarthiadda.in/college/lists',
         headers: {}
       };
 
@@ -44,7 +44,7 @@ const CollegePage = () => {
       let config = {
         method: 'post',
         maxBodyLength: Infinity,
-        url: 'http://139.59.66.116:3000/routes/lists',
+        url: 'https://vidyarthiadda.in/routes/lists',
         headers: {
           'Content-Type': 'application/json'
         },

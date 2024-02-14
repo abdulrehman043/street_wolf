@@ -16,7 +16,7 @@ function CollegeDetails() {
         if (collegeName) {
             const fetchData = async () => {
                 try {
-                    const response = await axios.post('http://139.59.66.116:3000/college_detail', {
+                    const response = await axios.post('https://vidyarthiadda.in/college_detail', {
                         name: "routes",
                         value: collegeName
                     }, {

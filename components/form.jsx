@@ -36,7 +36,7 @@ const MyForm = () => {
       const ipAddress = ipAddressResponse.data.ip;
       const userAgent = navigator.userAgent;
 
-      const response = await axios.post('http://139.59.66.116:3000/user_data/insert', {
+      const response = await axios.post('https://vidyarthiadda.in/user_data/insert', {
         ...formData,
         dateTime: formattedDate,
         ipAddress,
