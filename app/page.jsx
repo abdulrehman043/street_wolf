@@ -23,8 +23,8 @@ const Home = () => {
       <Milestone/>
       {/* <PartnerColleges/> */}
       {/* <Testimonial/> */}
-      <NewsLetter/>
-      <Youtube/>
+      {/* <NewsLetter/> */}
+      {/* <Youtube/> */}
       <Footer/>
     </div>
   );

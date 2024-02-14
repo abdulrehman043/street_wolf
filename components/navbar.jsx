@@ -20,22 +20,23 @@ const NavBar = () => {
         'Management': [
             { label: 'Management', link: '/colleges/top-mba-colleges' },
             { label: 'MBA', link: '/colleges/top-mba-colleges' },
-            { label: 'BBA', link: '/colleges/top-bba-colleges' }
+            { label: 'BBA', link: '/colleges/top-bba-colleges' },
+            { label: 'PGDM', link: '/colleges/top-pgdm-colleges' },
         ],
         'Law': [
             { label: 'Law', link: '/colleges/top-llb-colleges' },
-            { label: 'LLB', link: '/colleges/top-llb-colleges' }
+            { label: 'LLB', link: '/colleges/top-llb-colleges' },
+            { label: 'BA LLB', link: '/colleges/top-ba-llb-colleges' },
         ],
         'Commerce': [
-            { label: 'B.Com', link: '/colleges/top-llb-colleges' },
-            { label: 'Services Details', link: 'service-details.html' }
+            { label: 'Commerce', link: '/colleges/top-bcom-colleges' },
+            { label: 'B.Com', link: '/colleges/top-bcom-colleges' }
         ],
         'Medical': [
-            { label: 'Medical', link: 'blog.html' },
-            { label: 'Blog Classic', link: 'blog-classic.html' },
-            { label: 'Blog Details', link: 'blog-details.html' }
+            { label: 'Medical', link: '/colleges/top-pharmacy-colleges' },
+            { label: 'Pharmacy', link: '/colleges/top-pharmacy-colleges' }
         ],
-        'Contact': [{ label: 'Contact', link: 'contact.html' }]
+        'Apply Now': [{ label: 'Apply Now', link: '/apply/student_application' }]
     };
 
     useEffect(() => {
@@ -49,15 +50,17 @@ const NavBar = () => {
                 document.querySelector('.sticky-header .navigation').insertAdjacentHTML('beforeend', mobileMenuContent);
 
                 // Dropdown Button
+                // Inside useEffect
                 var dropdownBtns = document.querySelectorAll('.mobile-menu li.dropdown .dropdown-btn');
                 dropdownBtns.forEach(function (btn) {
                     btn.addEventListener('click', function () {
-                        var submenu = this.previousElementSibling;
+                        var submenu = this.nextElementSibling; // Change this line
                         if (submenu) {
                             submenu.style.display = (submenu.style.display === 'none' || submenu.style.display === '') ? 'block' : 'none';
                         }
                     });
                 });
+
 
                 var animButton = document.querySelector(".mobile-nav-toggler");
                 var mobileMenu = document.querySelector(".mobile-menu");
@@ -134,7 +137,7 @@ const NavBar = () => {
                                 <div className="header_upper_one_box pull-left">
                                     <div className="logo">
 
-                                        <a href="index.html"><img src="/assets/logo/logo.png" alt="" title="" /></a>
+                                        <a href="/"><img src="/assets/logo/logo.png" alt="" title="" /></a>
                                     </div>
                                 </div>
                                 <div className="header_upper_two_box one pull-right">
@@ -216,41 +219,26 @@ const NavBar = () => {
 
             <div className="mobile-menu close-menu">
                 <nav className="menu-box">
-                    <ul className="navigation">
-                        <li className="dropdown current"><a href="index.html">Engineering</a>
+   
+                <ul className="navigation">
+            {Object.entries(options).map(([category, items]) => (
+                <li key={category} className={items.length > 1 ? 'dropdown' : ''}>
+                    <a href={items[0].link}>{items[0].label}</a>
+                    {items.length > 1 && (
+                        <>
+                            <div className="dropdown-btn"><span className="fa fa-angle-down"></span></div>
                             <ul>
-                                <li><a href="college_page.html">Demo college 01</a></li>
-                                <li><a href="index2.html">Home 02</a></li>
+                                {items.slice(1).map((item, index) => (
+                                    <li key={`${category}-${index}`}>
+                                        <a href={item.link}>{item.label}</a>
+                                    </li>
+                                ))}
                             </ul>
-                            <div className="dropdown-btn"><span className="fa fa-angle-down"></span></div></li>
-                        <li><a href="about.html">Management</a></li>
-                        <li className="dropdown"><a href="#">Law</a>
-                            <ul>
-                                <li><a href="team.html">Team</a></li>
-                                <li><a href="testimonials.html">Testimonial</a></li>
-                                <li><a href="project.html">Project</a></li>
-                                <li><a href="project-details.html">Project Details</a>
-                                </li>
-                                <li><a href="faq.html">Faq</a></li>
-                                <li><a href="error.html">Error</a></li>
-                            </ul>
-                            <div className="dropdown-btn"><span className="fa fa-angle-down"></span></div></li>
-                        <li className="dropdown"><a href="#">Commerce</a>
-                            <ul>
-                                <li><a href="service.html"> Services</a></li>
-                                <li><a href="service-details.html"> Services Details</a>
-                                </li>
-                            </ul>
-                            <div className="dropdown-btn"><span className="fa fa-angle-down"></span></div></li>
-                        <li className="dropdown"><a href="#">Medical</a>
-                            <ul>
-                                <li><a href="blog.html">Blog Grid</a></li>
-                                <li><a href="blog-classic.html">Blog Classic</a></li>
-                                <li><a href="blog-details.html">Blog Details</a></li>
-                            </ul>
-                            <div className="dropdown-btn"><span className="fa fa-angle-down"></span></div></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+                        </>
+                    )}
+                </li>
+            ))}
+        </ul>
                 </nav>
             </div>
 

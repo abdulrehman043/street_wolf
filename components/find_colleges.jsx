@@ -111,7 +111,7 @@ const FindCollege = () => {
                         <div className="col-lg-2 col-md-6">
                             <div className="features-two-sec-single  hover_yellow">
                                 <div className="text-center">
-                                    <img src="assets/logo/hyd.png" alt="Engaged Learners, Active Learners" />
+                                    <img src="assets/logo/hyedrabad.png" alt="Engaged Learners, Active Learners" />
                                 </div>
                                 <h3 className="text-center">Hyedrabad</h3>
                             </div>
