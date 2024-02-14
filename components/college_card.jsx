@@ -51,7 +51,7 @@ const CollegeCard = ({ collegeName, HighestPlacement, AveragePlacement, CityLoca
                     </div>
                     <div className="container">
                         <div className="row">
-                            <div className="col-12 d-flex justify-content-around">
+                            <div className="col-12 d-flex justify-content-around my-2">
                                 <div className="badge va_blue_bg me-1" style={{ cursor: 'pointer' }}>
                                     <i className="fa fa-university"></i>
                                     Apply Now
