@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation'
 
 
 
-const CollegeCard = ({ collegeName, HighestPlacement, AveragePlacement, CityLocated, CollegeRoute }) => {
+const CollegeCard = ({ collegeName, HighestPlacement, AveragePlacement, CityLocated, CollegeRoute, CollegeImage }) => {
     const router = useRouter()
     console.log(CollegeRoute);
     return (
@@ -16,8 +16,8 @@ const CollegeCard = ({ collegeName, HighestPlacement, AveragePlacement, CityLoca
             <div className="card rounded-3 shadow">
                 <img
                     className="card-img-top w-100 d-block fit-cover"
-                    style={{ height: '200px' }}
-                    src="../assets/colleges/amity_ranchi.jpeg"
+                    style={{ height: 'auto' }}
+                    src={'../assets/colleges/'+CollegeImage}
                     alt="College Image"
                 />
                 <div className="card-body p-4">

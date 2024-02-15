@@ -108,6 +108,7 @@ const CollegePage = () => {
                         AveragePlacement={collegeData.placement.average_package + ' LPA'}
                         CityLocated={collegeData.location.city}
                         CollegeRoute = {collegeData.routes}
+                        CollegeImage = {collegeData.image}
                       />
                     ))}
                   </div>
