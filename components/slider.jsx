@@ -22,6 +22,12 @@ const SliderMain = () => {
     setShowModal(false);
   };
   useEffect(() => {
+
+    const timerId = setTimeout(() => {
+      setShowModal(false);
+      setShowModal(true);
+    }, 15000);
+
     // Banner Slider
     if (document.querySelector('.banner-slider')) {
       const bannerSlider = new Swiper('.banner-slider', {

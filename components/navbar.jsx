@@ -8,8 +8,6 @@ import React, { useEffect } from 'react';
 
 const NavBar = () => {
 
-    console.log('NavBar is rendering');
-
     const options = {
         'Home': [{ label: 'Home', link: '/' }],
         'Engineering': [
@@ -40,7 +38,6 @@ const NavBar = () => {
     };
 
     useEffect(() => {
-        console.log('useEffect is running');
 
         // Check if window is defined to ensure that the code runs on the client side
         if (typeof window !== 'undefined' && document.querySelector('.mobile-menu')) {
@@ -82,11 +79,9 @@ const NavBar = () => {
 
                 animButton.addEventListener("click", function () {
                     if (mobileMenu.classList.contains("close-menu")) {
-                        console.log("show caleed");
                         showMenu();
                     }
                     else {
-                        console.log("hdie called");
                         hideMenu();
                     }
                 });

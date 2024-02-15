@@ -43,7 +43,9 @@ function CollegeDetails() {
                     <div style={{ position: 'relative' }}>
                         <span className="borderline">
                             {/* <img src={collegeDetails?.image && collegeDetails.image} alt="Banner" /> */}
-                            <img src='../assets/colleges/amity_ranchi.png' alt="Banner" />
+                            {collegeDetails && collegeDetails.image && (
+                                <img src={`../assets/colleges/${collegeDetails.image}`} alt="Banner" />
+                                )}
                             {/* <Image
                                 src={collegeDetails?.image && collegeDetails.image}
                                 alt="Picture of the author"

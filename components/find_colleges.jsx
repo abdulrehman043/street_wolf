@@ -23,49 +23,59 @@ const FindCollege = () => {
                                 <div className="funfacts-one-single">
                                     <img src="assets/logo/engineering.png" alt="Engaged Learners, Active Learners" />
                                 </div>
-                                <h3>Engineering</h3>
+                                <h3 className="text-dark">Engineering</h3>
                             </div>
                             </Link>
                         </div>
                         <div className="col-lg-2 col-md-6">
+                        <Link href="/colleges/top-mba-colleges">
                             <div className="features-two-sec-single  hover_yellow text-center">
                                 <div className="funfacts-one-single">
                                     <img src="assets/logo/management.png" alt="Engaged Learners, Active Learners" />
                                 </div>
-                                <h3>Management</h3>
+                                <h3 className="text-dark">Management</h3>
                             </div>
+                        </Link>
                         </div>
                         <div className="col-lg-2 col-md-6">
+                        <Link href="/colleges/top-bca-colleges">
                             <div className="features-two-sec-single  hover_yellow text-center" >
                                 <div className="funfacts-one-single">
                                     <img src="assets/logo/it_and_cs.png" alt="Engaged Learners, Active Learners" />
                                 </div>
-                                <h3>IT & CS</h3>
+                                <h3 className="text-dark">IT & CS</h3>
                             </div>
+                        </Link>    
                         </div>
                         <div className="col-lg-2 col-md-6">
+                        <Link href="/colleges/top-llb-colleges">
                             <div className="features-two-sec-single  hover_yellow text-center">
                                 <div className="funfacts-one-single">
                                     <img src="assets/logo/law.png" alt="Engaged Learners, Active Learners" />
                                 </div>
-                                <h3>Law</h3>
+                                <h3 className="text-dark">Law</h3>
                             </div>
+                        </Link>
                         </div>
                         <div className="col-lg-2 col-md-6">
+                         <Link href="/colleges/top-pharmacy-colleges">
                             <div className="features-two-sec-single  hover_yellow text-center">
                                 <div className="funfacts-one-single">
                                     <img src="assets/logo/medical.png" alt="Engaged Learners, Active Learners" />
                                 </div>
-                                <h3>Pharmacy</h3>
+                                <h3 className="text-dark">Pharmacy</h3>
                             </div>
+                        </Link>
                         </div>
                         <div className="col-lg-2 col-md-6">
+                        <Link href="/colleges/top-education-colleges">
                             <div className="features-two-sec-single  hover_yellow text-center">
                                 <div className="funfacts-one-single">
                                     <img src="assets/logo/law.png" alt="Engaged Learners, Active Learners" />
                                 </div>
-                                <h3>Education</h3>
+                                <h3 className="text-dark">Education</h3>
                             </div>
+                        </Link>    
                         </div>
                     </div>
                 </div>
@@ -77,52 +87,64 @@ const FindCollege = () => {
                     </div>
                     <div className="row">
                         <div className="col-lg-2 col-md-6">
+                        <Link href="/colleges/top-colleges-in-delhi">
                             <div className="features-two-sec-single  hover_yellow">
-                                <div className="text-center">
+                                <div className="text-center text-dark">
                                     <img src="assets/logo/delhi.png" alt="Engaged Learners, Active Learners" />
                                 </div>
-                                <h3 className="text-center">Delhi</h3>
+                                <h3 className="text-center text-dark">Delhi</h3>
                             </div>
+                        </Link>
                         </div>
                         <div className="col-lg-2 col-md-6">
+                        <Link href="/colleges/top-colleges-in-mumbai">
                             <div className="features-two-sec-single  hover_yellow">
-                                <div className="text-center">
+                                <div className="text-center text-dark">
                                     <img src="assets/logo/mumbai.png" alt="Engaged Learners, Active Learners" />
                                 </div>
-                                <h3 className="text-center">Mumbai</h3>
+                                <h3 className="text-center text-dark">Mumbai</h3>
                             </div>
+                        </Link>
                         </div>
                         <div className="col-lg-2 col-md-6">
+                        <Link href="/colleges/top-colleges-in-chennai">
                             <div className="features-two-sec-single  hover_yellow">
-                                <div className="text-center">
+                                <div className="text-center text-dark">
                                     <img src="assets/logo/hyd.png" alt="Engaged Learners, Active Learners" />
                                 </div>
-                                <h3 className="text-center">Chennai</h3>
+                                <h3 className="text-center text-dark">Chennai</h3>
                             </div>
+                        </Link>
                         </div>
                         <div className="col-lg-2 col-md-6">
+                        <Link href="/colleges/top-colleges-in-kolkata">
                             <div className="features-two-sec-single  hover_yellow">
-                                <div className="text-center">
+                                <div className="text-center text-dark">
                                     <img src="assets/logo/kolkata.png" alt="Engaged Learners, Active Learners" />
                                 </div>
-                                <h3 className="text-center">Kolkata</h3>
+                                <h3 className="text-center text-dark">Kolkata</h3>
                             </div>
+                        </Link>   
                         </div>
                         <div className="col-lg-2 col-md-6">
+                        <Link href="/colleges/top-colleges-in-hyedrabad">
                             <div className="features-two-sec-single  hover_yellow">
-                                <div className="text-center">
+                                <div className="text-center text-dark">
                                     <img src="assets/logo/hyedrabad.png" alt="Engaged Learners, Active Learners" />
                                 </div>
-                                <h3 className="text-center">Hyedrabad</h3>
+                                <h3 className="text-center text-dark">Hyedrabad</h3>
                             </div>
+                        </Link>
                         </div>
                         <div className="col-lg-2 col-md-6">
+                        <Link href="/colleges/top-colleges-in-banglore">
                             <div className="features-two-sec-single  hover_yellow">
-                                <div className="text-center">
+                                <div className="text-center text-dark">
                                     <img src="assets/logo/banglore.png" alt="Engaged Learners, Active Learners" />
                                 </div>
-                                <h3 className="text-center">Banglore</h3>
+                                <h3 className="text-center text-dark">Banglore</h3>
                             </div>
+                        </Link>  
                         </div>
                     </div>
                 </div>
