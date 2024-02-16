@@ -67,7 +67,7 @@ const SliderMain = () => {
                       <span> Find the best colleges in the city!</span>
                     </h1>
                     <div className="link-box">
-                      <a href="#" onClick={openModal} className="theme-btn btn-style-one"><span>Get a call</span></a>
+                      <button onClick={openModal} className="theme-btn btn-style-one "><span>Get a call</span></button>
                     </div>
                   </div>
                 </div>
@@ -83,7 +83,7 @@ const SliderMain = () => {
 
         <div className="banner-shape__left_1"></div>
         <div className="banner-shape__left_2"></div>
-        <div className="banner-big-title" data-parallax='{"x": 200}'>Vidyarthiadda</div>
+        <div className="banner-big-title d-none d-md-block" data-parallax='{"x": 200}'>Vidyarthiadda</div>
       </section>
       <Modal showModal={showModal} onClose={closeModal} />
     </div>

@@ -113,10 +113,11 @@ const NavBar = () => {
                                 </div>
                                 <div className="header_top_two_box pull-right">
                                     <div className="social_links_1">
-                                        <a href="#"><i className="fa fa-facebook"></i></a>
-                                        <a href="#"><i className="fa fa-twitter"></i></a>
-                                        <a href="#"><i className="fa fa-whatsapp"></i></a>
-                                        <a href="#"><i className="fab fa-instagram"></i></a>
+                                        <a href="https://www.instagram.com/vidyarthiadda_official/"  target='_blank'><i className="fab fa-instagram"></i></a>
+                                        <a href="https://www.facebook.com/people/vidyarthiadda/100087457449318/"  target='_blank'><i className="fa fa-facebook"></i></a>
+                                        <a href="https://api.whatsapp.com/send/?phone=%2B919560328640&text&type=phone_number&app_absent=0"  target='_blank'><i className="fa fa-whatsapp"></i></a>
+                                        <a href="https://www.linkedin.com/company/vidyarthiadda-edutech-services?originalSubdomain=in"  target='_blank'><i className="fa fa-linkedin"></i></a>
+                                 
                                     </div>
                                 </div>
                             </div>

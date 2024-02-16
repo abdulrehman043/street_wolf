@@ -1,83 +1,59 @@
+import React, { useEffect, useState } from 'react';
 import "@styles/style.css";
 import "@styles/magnific-popup.css";
 import "@styles/responsive.css";
 import "@styles/font-awesome.min.css";
 import "@styles/bs_53.css";
 
-import React from 'react';
+const AnimatedCount = ({ target, speed }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (count < target) {
+        setCount((prevCount) => prevCount + 1);
+      } else {
+        clearInterval(intervalId);
+      }
+    }, speed);
+
+    return () => clearInterval(intervalId);
+  }, [count, target, speed]);
+
+  return <span>{count}</span>;
+};
 
 const Milestone = () => {
-    const sectionStyle = {
-        backgroundImage: 'url(/assets/background/funfact-1-bg.jpg)',
-    };
+  const milestones = [
+    { target: 1000, label: 'Admissions taken' },
+    { target: 300, label: 'Career counsellors' },
+    { target: 600, label: 'Students placed' },
+    { target: 1500, label: 'Partner colleges' },
+  ];
 
-    return (
-        <section className="funfacts-one-section" style={sectionStyle}>
-            <div className="container">
-                <div className="row">
-                    <div className="thm-section-title text-center">
-                        <h4 className="sub-title-shape-left section_title-subheading">Milestones achieved</h4>
-                    </div>
-                    <div className="col-xl-3 col-lg-3 col-md-6">
-                        <div className="funfacts-one-single wow fadeInUp animated" data-wow-delay="100ms">
-                            <div className="icon">
-                                <span className="flaticon-like"></span>
-                            </div>
-                            <div className="content count-box counted">
-                                <h2>
-                                    <span className="timer" data-from="1" data-to="1000" data-speed="5000"
-                                        data-refresh-interval="50">1000+</span>
-                                </h2>
-                                <p>Admissions taken</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-3 col-lg-3 col-md-6">
-                        <div className="funfacts-one-single wow fadeInUp animated" data-wow-delay="200ms">
-                            <div className="icon">
-                                <span className="flaticon-architect"></span>
-                            </div>
-                            <div className="content count-box counted">
-                                <h2>
-                                    <span className="timer" data-from="1" data-to="300" data-speed="5000"
-                                        data-refresh-interval="50">300+</span>
-                                </h2>
-                                <p>Career counsellors</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-3 col-lg-3 col-md-6">
-                        <div className="funfacts-one-single wow fadeInUp animated" data-wow-delay="300ms">
-                            <div className="icon">
-                                <span className="flaticon-medal"></span>
-                            </div>
-                            <div className="content count-box counted">
-                                <h2>
-                                    <span className="timer" data-from="1" data-to="600" data-speed="5000"
-                                        data-refresh-interval="50">600+</span>
-                                </h2>
-                                <p>Students placed</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-3 col-lg-3 col-md-6">
-                        <div className="funfacts-one-single wow fadeInUp animated" data-wow-delay="400ms">
-                            <div className="icon">
-                                <span className="flaticon-carbon"></span>
-                            </div>
-                            <div className="content count-box counted">
-                                <h2>
-                                    <span className="timer" data-from="1" data-to="1500" data-speed="5000"
-                                        data-refresh-interval="50">1500+</span>
-                                </h2>
-                                <p>Partner colleges</p>
-                            </div>
-                        </div>
-                    </div>
+  return (
+    <section className="funfacts-one-section" style={{backgroundImage: 'url(/assets/background/funfact-1-bg.jpg)'}}>
+      <div className="container">
+        <div className="row">
+          {milestones.map((item, index) => (
+            <div key={index} className="col-xl-3 col-lg-3 col-md-6">
+              <div className="funfacts-one-single wow fadeInUp animated" data-wow-delay={`${100 * index}ms`}>
+                <div className="icon">
+                  <span className="flaticon-like"></span>
                 </div>
+                <div className="content count-box counted">
+                  <h2>
+                    <AnimatedCount target={item.target} speed={4} /> +
+                  </h2>
+                  <p>{item.label}</p>
+                </div>
+              </div>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Milestone;

@@ -11,7 +11,12 @@ function CollegeDetails() {
     const [collegeDetails, setCollegeDetails] = useState(null);
     const router = useRouter();
     const collegeName = router.query.name;
-
+    const getRandomNumber = (min, max) => {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      };
+    
+      // Use the getRandomNumber function to get a random number between 20 and 200
+      const randomReviewCount = getRandomNumber(20, 200);
     useEffect(() => {
         if (collegeName) {
             const fetchData = async () => {
@@ -85,7 +90,7 @@ function CollegeDetails() {
                                 <path
                                     d="M8.24325 7.83992L1.86325 8.76492L1.75025 8.78792C1.57919 8.83333 1.42325 8.92333 1.29835 9.04872C1.17344 9.17412 1.08406 9.33041 1.03932 9.50165C0.994575 9.67289 0.996081 9.85293 1.04368 10.0234C1.09128 10.1939 1.18327 10.3486 1.31025 10.4719L5.93225 14.9709L4.84225 21.3259L4.82925 21.4359C4.81878 21.6128 4.85552 21.7894 4.9357 21.9474C5.01589 22.1055 5.13664 22.2394 5.28559 22.3354C5.43454 22.4315 5.60634 22.4862 5.7834 22.494C5.96046 22.5018 6.13642 22.4625 6.29325 22.3799L11.9993 19.3799L17.6923 22.3799L17.7923 22.4259C17.9573 22.4909 18.1367 22.5109 18.312 22.4837C18.4873 22.4565 18.6522 22.3832 18.7898 22.2712C18.9275 22.1592 19.0328 22.0127 19.0951 21.8466C19.1574 21.6804 19.1743 21.5008 19.1443 21.3259L18.0533 14.9709L22.6773 10.4709L22.7553 10.3859C22.8667 10.2487 22.9397 10.0844 22.967 9.90972C22.9942 9.73506 22.9747 9.5563 22.9103 9.39165C22.846 9.22701 22.7392 9.08235 22.6007 8.97244C22.4623 8.86252 22.2972 8.79126 22.1223 8.76592L15.7423 7.83992L12.8903 2.05992C12.8077 1.89246 12.68 1.75144 12.5214 1.65283C12.3629 1.55422 12.1799 1.50195 11.9933 1.50195C11.8066 1.50195 11.6236 1.55422 11.4651 1.65283C11.3065 1.75144 11.1788 1.89246 11.0963 2.05992L8.24325 7.83992Z"
                                     fill="#FFC20C" />
-                            </svg><span className="review-text">(332 Reviews)</span>
+                            </svg><span className="review-text">({randomReviewCount} Reviews)</span>
                         </div>
                         <div className="ranking-1 grid-itms">
                             <span className="ranking-text">{collegeDetails?.location && collegeDetails.location.state}</span>
@@ -94,6 +99,7 @@ function CollegeDetails() {
                     <div className="right-div">
                         <div></div>
                         <div className="grid-itms2">
+                            <a href='/apply/student_application'>
                             <span className="apply-text">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
                                     <path
@@ -102,16 +108,17 @@ function CollegeDetails() {
                                 </svg>
                                 Apply
                             </span>
+                            </a>
                         </div>
                         <div className="grid-itms2">
-                            <span className="save-text">
+                            {/* <span className="save-text">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
                                     <path
                                         d="M16.4375 7.75V18.0625L11.75 15.25L7.0625 18.0625V7.75C7.0625 7.00408 7.35882 6.28871 7.88626 5.76126C8.41371 5.23382 9.12908 4.9375 9.875 4.9375H13.625C14.3709 4.9375 15.0863 5.23382 15.6137 5.76126C16.1412 6.28871 16.4375 7.00408 16.4375 7.75Z"
                                         stroke="#FFC20C" strokeWidth="1.875" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                                 Save
-                            </span>
+                            </span> */}
                         </div>
                     </div>
                 </section>
