@@ -10,7 +10,6 @@ export const metadata = {
 const RootLayout = ({ children }) => (
   <html lang='en'>
     <Head>
-      <div>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=G-93KTPMMH3S`}
           strategy="afterInteractive"
@@ -38,9 +37,6 @@ const RootLayout = ({ children }) => (
           `,
           }}
         />
-      </div>
-
-
     </Head>
     <body>
       <div className='main'>
