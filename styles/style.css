@@ -4913,4 +4913,12 @@
 .z-index-9999 {
     z-index: 9999 !important;
   }
-  
+/* Mobile devices with a minimum width of 480 pixels */
+@media only screen and (min-width: 480px) {
+    /* Select the h2 element inside elements with the class .thm-section-title */
+    .thm-section-title h2 {
+        /* Set the font size to 27 pixels */
+        font-size: 27px;
+    }
+}
+
