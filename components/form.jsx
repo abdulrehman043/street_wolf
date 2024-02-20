@@ -122,14 +122,14 @@ const MyForm = () => {
               <button type="submit" className="btn btn-primary">Get Free Consultancy</button>
             </div>
           </form>
-          {submissionInfo.dateTime && (
+          {/* {submissionInfo.dateTime && (
             <div className="mt-3">
               <h5>Submission Information:</h5>
               <p>Date and Time: {submissionInfo.dateTime}</p>
               <p>IP Address: {submissionInfo.ipAddress}</p>
               <p>User Agent: {submissionInfo.userAgent}</p>
             </div>
-          )}
+          )} */}
           {showSuccessModal && (
             <div className="modal fade show success-modal" tabIndex="-1" role="dialog" style={{ display: 'block' }}>
               <div className="modal-dialog">
