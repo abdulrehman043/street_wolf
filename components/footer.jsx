@@ -32,10 +32,9 @@ const Footer = () =>
                        <div className="footer-widget-title">
                         </div>
                         <ul className="footer-widget-useful-links-list list-unstyled">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Terms and Conditions</a></li>
-                            <li><a href="#">Faq’s</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="/about_us">About Us</a></li>
+                            <li><a href="/terms_and_conditions">Terms and Conditions</a></li>
+                            <li><a href="/FAQ">Faq’s</a></li>
                         </ul>
                     </div>
                 </div>
