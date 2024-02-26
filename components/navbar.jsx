@@ -3,7 +3,7 @@ import "@styles/style.css";
 import "@styles/magnific-popup.css";
 import "@styles/responsive.css";
 import "@styles/font-awesome.min.css";
-import "@styles/bs_53.css"; 
+import "@styles/bs_53.css";
 import React, { useEffect } from 'react';
 
 const NavBar = () => {
@@ -108,16 +108,18 @@ const NavBar = () => {
                                 <div className="header_top_one_box pull-left">
                                     <ul>
                                         <li><span className="flaticon-phone-call-1"></span><a href="tel:8125553344">+91
-                                        9560328640</a></li>
+                                            9560328640</a></li>
                                     </ul>
                                 </div>
                                 <div className="header_top_two_box pull-right">
                                     <div className="social_links_1">
-                                        <a href="https://www.instagram.com/vidyarthiadda_official/"  target='_blank'><i className="fab fa-instagram"></i></a>
-                                        <a href="https://www.facebook.com/people/vidyarthiadda/100087457449318/"  target='_blank'><i className="fa fa-facebook"></i></a>
-                                        <a href="https://api.whatsapp.com/send/?phone=%2B919560328640&text&type=phone_number&app_absent=0"  target='_blank'><i className="fa fa-whatsapp"></i></a>
-                                        <a href="https://www.linkedin.com/company/vidyarthiadda-edutech-services?originalSubdomain=in"  target='_blank'><i className="fa fa-linkedin"></i></a>
-                                 
+                                        <a href="https://www.instagram.com/vidyarthiadda_official/" target='_blank'><i className="fab fa-instagram"></i></a>
+                                        <a href="https://www.facebook.com/people/vidyarthiadda/100087457449318/" target='_blank'><i className="fa fa-facebook"></i></a>
+                                        <a href="https://api.whatsapp.com/send/?phone=%2B919560328640&text=Hello%2C%20I%20Have%20a%20query%20for%20college%20and%20course%20selection.&type=phone_number&app_absent=0" target='_blank'>
+                                            <i className="fa fa-whatsapp"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/company/vidyarthiadda-edutech-services?originalSubdomain=in" target='_blank'><i className="fa fa-linkedin"></i></a>
+
                                     </div>
                                 </div>
                             </div>
@@ -215,26 +217,26 @@ const NavBar = () => {
 
             <div className="mobile-menu close-menu">
                 <nav className="menu-box">
-   
-                <ul className="navigation">
-            {Object.entries(options).map(([category, items]) => (
-                <li key={category} className={items.length > 1 ? 'dropdown' : ''}>
-                    <a href={items[0].link}>{items[0].label}</a>
-                    {items.length > 1 && (
-                        <>
-                            <div className="dropdown-btn"><span className="fa fa-angle-down"></span></div>
-                            <ul>
-                                {items.slice(1).map((item, index) => (
-                                    <li key={`${category}-${index}`}>
-                                        <a href={item.link}>{item.label}</a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </>
-                    )}
-                </li>
-            ))}
-        </ul>
+
+                    <ul className="navigation">
+                        {Object.entries(options).map(([category, items]) => (
+                            <li key={category} className={items.length > 1 ? 'dropdown' : ''}>
+                                <a href={items[0].link}>{items[0].label}</a>
+                                {items.length > 1 && (
+                                    <>
+                                        <div className="dropdown-btn"><span className="fa fa-angle-down"></span></div>
+                                        <ul>
+                                            {items.slice(1).map((item, index) => (
+                                                <li key={`${category}-${index}`}>
+                                                    <a href={item.link}>{item.label}</a>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </>
+                                )}
+                            </li>
+                        ))}
+                    </ul>
                 </nav>
             </div>
 

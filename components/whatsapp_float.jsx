@@ -30,7 +30,7 @@ const WhatsAppButton = () => {
       onClick={openWhatsApp}
     >
       <img
-        src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-png-0.png"
+        src="/assets/logo/whatsapp_logo.png"
         alt="WhatsApp"
         style={{ width: '30px', height: '30px', borderRadius: '50%' }}
       />
