@@ -120,7 +120,7 @@ const CollegePage = () => {
         </div>
       </div>
       <Footer/>
-      <WhatsAppButton/>
+      <WhatsAppButton message={`Hello, I'm interested in ${routeList.length > 0 && routeList[0].course.toLowerCase()} course`} />
     </div>
    
   );

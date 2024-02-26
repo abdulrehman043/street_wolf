@@ -1,15 +1,11 @@
 // components/WhatsAppButton.jsx
 import React from 'react';
 
-const WhatsAppButton = () => {
+const WhatsAppButton = ({message}) => {
   const openWhatsApp = () => {
-    // Replace 'YOUR_PHONE_NUMBER' with your actual phone number
+    const encodedMessage = encodeURIComponent(message || 'Hello, I have a query for college and course selection.');
     const phoneNumber = '+919560328640';
-
-    // Replace 'YOUR_PRE_TYPED_MESSAGE' with your desired pre-typed message
-    const preTypedMessage = encodeURIComponent('Hello, I Have a query for college and course selection.');
-
-    const whatsappApiUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${preTypedMessage}`;
+    const whatsappApiUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
 
     window.open(whatsappApiUrl, '_blank');
   };

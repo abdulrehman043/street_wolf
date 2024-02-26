@@ -295,7 +295,7 @@ function CollegeDetails() {
                 </section>
             </div>
             <Footer/>
-            <WhatsAppButton/>
+            <WhatsAppButton message={`Hello, I'm interested in ${collegeDetails?.college_name}`} />
         </div>
     );
 }
