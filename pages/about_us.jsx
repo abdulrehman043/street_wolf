@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import NavBar from '@/components/navbar';
 import Footer from '@/components/footer';
+import WhatsAppButton from '@/components/whatsapp_float';
 
 const About = () => {
   return (
@@ -33,6 +34,7 @@ const About = () => {
         </div>
       </div>
       <Footer/>
+      <WhatsAppButton/>
     </>
   );
 };

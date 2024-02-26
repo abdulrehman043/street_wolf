@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import NavBar from '@/components/navbar';
 import Footer from '@/components/footer';
+import WhatsAppButton from '@/components/whatsapp_float';
 
 // A single accordion item component
 const AccordionItem = ({ id, question, answer, isActive, onClick }) => {
@@ -73,6 +74,8 @@ const FAQs = () => {
         </div>
       </div>
       <Footer />
+      <WhatsAppButton/>
+
     </>
   );
 };

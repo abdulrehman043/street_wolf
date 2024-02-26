@@ -13,6 +13,7 @@ import Testimonial from "@/components/testimonial";
 import NewsLetter from "@/components/newsletter";
 import Youtube from "@/components/youtube";
 import Footer from "@/components/footer";
+import WhatsAppButton from "@/components/whatsapp_float";
 const Home = () => {
   return (
     <div>
@@ -26,6 +27,7 @@ const Home = () => {
       {/* <NewsLetter/> */}
       {/* <Youtube/> */}
       <Footer/>
+      <WhatsAppButton />
     </div>
   );
 };

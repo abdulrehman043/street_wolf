@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import NavBar from '@/components/navbar';
 import Footer from '@/components/footer';
+import WhatsAppButton from '@/components/whatsapp_float';
 
 const TermsAndConditions = () => {
   return (
@@ -45,6 +46,7 @@ const TermsAndConditions = () => {
         </div>
       </div>
       <Footer />
+      <WhatsAppButton/>
     </>
   );
 };

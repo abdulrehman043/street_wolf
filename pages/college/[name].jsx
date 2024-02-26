@@ -1,6 +1,7 @@
 import "@styles/college_page.css";
 import NavBar from "@components/navbar";
 import Footer from "@/components/footer";
+import WhatsAppButton from "@/components/whatsapp_float";
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
@@ -294,6 +295,7 @@ function CollegeDetails() {
                 </section>
             </div>
             <Footer/>
+            <WhatsAppButton/>
         </div>
     );
 }

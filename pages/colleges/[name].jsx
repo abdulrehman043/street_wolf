@@ -5,6 +5,7 @@ import NavBar from "@components/navbar";
 import FilterCode from "@/components/filter_code";
 import CollegeCard from "@/components/college_card";
 import Footer from "@/components/footer";
+import WhatsAppButton from "@/components/whatsapp_float";
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -119,6 +120,7 @@ const CollegePage = () => {
         </div>
       </div>
       <Footer/>
+      <WhatsAppButton/>
     </div>
    
   );
