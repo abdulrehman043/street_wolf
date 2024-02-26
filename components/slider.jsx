@@ -26,7 +26,7 @@ const SliderMain = () => {
     const timerId = setTimeout(() => {
       setShowModal(false);
       setShowModal(true);
-    }, 15000);
+    }, 10000);
 
     // Banner Slider
     if (document.querySelector('.banner-slider')) {
