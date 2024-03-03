@@ -132,7 +132,7 @@ const FindCollege = () => {
                                 <div className="text-center text-dark">
                                     <img src="assets/logo/hyedrabad.png" alt="Engaged Learners, Active Learners" />
                                 </div>
-                                <h3 className="text-center text-dark">Hyedrabad</h3>
+                                <h3 className="text-center text-dark">Hyderabad</h3>
                             </div>
                         </Link>
                         </div>
@@ -142,7 +142,7 @@ const FindCollege = () => {
                                 <div className="text-center text-dark">
                                     <img src="assets/logo/banglore.png" alt="Engaged Learners, Active Learners" />
                                 </div>
-                                <h3 className="text-center text-dark">Banglore</h3>
+                                <h3 className="text-center text-dark">Bangalore</h3>
                             </div>
                         </Link>  
                         </div>

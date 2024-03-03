@@ -56,7 +56,7 @@ return(
                         <div className="main-service-one-count">04</div>
                         <img src="/assets/logo/mentor.jpg" alt="" />
                         <h3>Dedicated Mentor</h3>
-                        <p>We will also assist you a mentor who will assist you unitl placement.</p>
+                        <p>We will also assign you a mentor who will assist you until you will get placed.</p>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@ return(
                         <div className="main-service-one-count">05</div>
                         <img src="/assets/logo/certifications.jpg" alt="" />
                         <h3>Free Certifications </h3>
-                        <p>One will have the opportunity to learn and enhance your skill for free and get
+                        <p>You will have the opportunity to learn and enhance your skill with free
                             certifications.</p>
                     </div>
                 </div>
@@ -77,8 +77,7 @@ return(
                         <div className="main-service-one-count">06</div>
                         <img src="/assets/logo/Notes and articles.jpg" alt="" />
                         <h3>Notes and Articles</h3>
-                        <p>We will give student the opportunity to access Notes (Syllabus) and Articles
-                            Unlimited times</p>
+                        <p>You will get access to free notes and articles unlimited times.</p>
                     </div>
                 </div>
             </div>
