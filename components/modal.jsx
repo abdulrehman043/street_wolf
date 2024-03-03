@@ -16,7 +16,7 @@ const Modal = ({ showModal, onClose }) => {
             <div className="modal-dialog modal-dialog-centered">
               <div className="modal-content rounded-3 shadow-lg">
                 <div className="modal-header bg-light">
-                  <h5 className="modal-title text-dark">Register for Free Consultancy</h5>
+                  <h5 className="modal-title text-dark">Get a callback</h5>
                   <button type="button" className="btn-close" onClick={closeModal}></button>
                 </div>
                 <div className="modal-body text-bg-light">
