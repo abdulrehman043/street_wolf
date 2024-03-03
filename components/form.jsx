@@ -114,6 +114,10 @@ const MyForm = () => {
                 </div>
               </>
             )}
+                <div className="mb-3">
+                  <label htmlFor="currentLocation" className="form-label">Your city</label>
+                  <input type="text" className="form-control" id="currentLocation" name="currentLocation" value={formData.currentLocation} onChange={handleChange} required />
+                </div>
             <div className="mb-3">
               <label htmlFor="courseName" className="form-label">Course Name</label>
               <input type="text" className="form-control" id="courseName" name="courseName" value={formData.courseName} onChange={handleChange} required />
