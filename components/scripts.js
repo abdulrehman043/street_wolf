@@ -42,8 +42,8 @@ const Scripts = () => {
                     src="https://www.facebook.com/tr?id=1067039781034205&ev=PageView&noscript=1"
                 />
             </noscript>
-
-            <script dangerouslySetInnerHTML={{ __html: SmartLookScript }} />
+            <script type='text/javascript' dangerouslySetInnerHTML={{ __html: SmartLookScript }}> </script>
+            
         </>
     );
 };
