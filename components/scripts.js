@@ -19,6 +19,13 @@ const Scripts = () => {
   fbq('init', '1067039781034205');
   fbq('track', 'PageView');`;
 
+  const SmartLookScript = `window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='https://web-sdk.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', 'cb0cb103185e7ecce86aec5b0bf9f55f8dc82df8', { region: 'eu' });`;
+
     return (
         <>
             {/* Google Analytics */}
@@ -36,6 +43,7 @@ const Scripts = () => {
                 />
             </noscript>
 
+            <script dangerouslySetInnerHTML={{ __html: SmartLookScript }} />
         </>
     );
 };
