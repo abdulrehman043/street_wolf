@@ -5,6 +5,8 @@ import "@styles/font-awesome.min.css";
 import "@styles/bs_53.css";
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import ApplyNow from "@/components/ApplyNow";
+
 
 
 const FindCollege = () => {
@@ -79,7 +81,9 @@ const FindCollege = () => {
                         </div>
                     </div>
                 </div>
-            </section><section className="features-two-section">
+            </section>
+            <ApplyNow/>
+            <section className="features-two-section">
                 <div className="container">
                     <div className="thm-section-title text-center">
                         <h4 className="sub-title-shape-left section_title-subheading">Find colleges</h4>
