@@ -14,12 +14,14 @@ import NewsLetter from "@/components/newsletter";
 import Youtube from "@/components/youtube";
 import Footer from "@/components/footer";
 import WhatsAppButton from "@/components/whatsapp_float";
+import ApplyNow from "@/components/ApplyNow";
 const Home = () => {
   return (
     <div>
       <NavBar/>
       <SliderMain/>
       <FindCollege/>
+      <ApplyNow/>
       <WhyUs/>
       <Milestone/>
       {/* <PartnerColleges/> */}
