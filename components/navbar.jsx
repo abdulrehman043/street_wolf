@@ -4,10 +4,20 @@ import "@styles/magnific-popup.css";
 import "@styles/responsive.css";
 import "@styles/font-awesome.min.css";
 import "@styles/bs_53.css";
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import SearchModal from '@/components/SearchModal';
 
 const NavBar = () => {
 
+    const [showModal, setShowModal] = useState(false);
+
+    const openModal = () => {
+        setShowModal(true);
+    };
+
+    const closeModal = () => {
+        setShowModal(false);
+    };
     const options = {
         'Home': [{ label: 'Home', link: '/' }],
         'Engineering': [
@@ -168,7 +178,7 @@ const NavBar = () => {
                                             </nav>
                                         </div>
                                     </div>
-                                    <div className="icon-search-box">
+                                    <div onClick={openModal} className="icon-search-box">
                                         <button className="dropdown-toggle" id="searchDropdown" data-toggle="dropdown"
                                             aria-haspopup="true" aria-expanded="false">
                                             <i className="fa fa-search" aria-hidden="true"></i>
@@ -245,7 +255,9 @@ const NavBar = () => {
 
             <div className="nav-overlay">
             </div>
+            <SearchModal showModal={showModal} onClose={closeModal} />
         </header>
+        
     );
 };
 
