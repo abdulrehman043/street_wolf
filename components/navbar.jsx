@@ -6,6 +6,7 @@ import "@styles/font-awesome.min.css";
 import "@styles/bs_53.css";
 import React, { useEffect, useState } from 'react';
 import SearchModal from '@/components/SearchModal';
+import SearchBar from "@/components/SearchBar";
 
 const NavBar = () => {
 
@@ -72,6 +73,7 @@ const NavBar = () => {
                 var animButton = document.querySelector(".mobile-nav-toggler");
                 var mobileMenu = document.querySelector(".mobile-menu");
                 var navOverlay = document.querySelector(".nav-overlay");
+                var search_button = document.querySelector(".search_phone");
 
                 function showMenu() {
                     mobileMenu.style.transition = 'left 0.6s ease';
@@ -94,6 +96,10 @@ const NavBar = () => {
                     else {
                         hideMenu();
                     }
+                });
+
+                search_button.addEventListener("click", function () {
+                        hideMenu();
                 });
 
                 navOverlay.addEventListener("click", function () {
@@ -227,7 +233,7 @@ const NavBar = () => {
 
             <div className="mobile-menu close-menu">
                 <nav className="menu-box">
-
+                    <SearchBar/>
                     <ul className="navigation">
                         {Object.entries(options).map(([category, items]) => (
                             <li key={category} className={items.length > 1 ? 'dropdown' : ''}>
