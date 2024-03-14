@@ -63,7 +63,7 @@ const SliderMain = () => {
                 <div className="content-box">
                   <div className="inner">
                     <h1>
-                      Book Your <br /> counselling session <br /> Now
+                      Book Free <br /> counselling session <br /> Now
                       <span> Find the best colleges in the city!</span>
                     </h1>
                     <div className="link-box">

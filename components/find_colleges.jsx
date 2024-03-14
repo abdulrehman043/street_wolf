@@ -16,7 +16,7 @@ const FindCollege = () => {
                 <div className="container">
                     <div className="thm-section-title text-center">
                         <h4 className="sub-title-shape-left section_title-subheading">Find colleges</h4>
-                        <h2>Find the colleges based on your course</h2>
+                        <h2>Find college based on courses</h2>
                     </div>
                     <div className="row">
                         <div className="col-lg-2 col-md-6" >
@@ -87,7 +87,7 @@ const FindCollege = () => {
                 <div className="container">
                     <div className="thm-section-title text-center">
                         <h4 className="sub-title-shape-left section_title-subheading">Find colleges</h4>
-                        <h2>Find the colleges based on your city</h2>
+                        <h2>Find colleges based on city</h2>
                     </div>
                     <div className="row">
                         <div className="col-lg-2 col-md-6">
