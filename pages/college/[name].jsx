@@ -112,6 +112,18 @@ function CollegeDetails() {
                             </a>
                         </div>
                         <div className="grid-itms2">
+                        <a href={`/apply/${collegeDetails?.routes}`}>
+                            <span className="apply-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                                    <path
+                                        d="M14.0625 9.625L10.3125 13.375L15.9375 19L19.6875 4L2.8125 10.5625L6.5625 12.4375L8.4375 18.0625L11.25 14.3125"
+                                        stroke="white" strokeWidth="1.875" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                                Fill The form
+                            </span>
+                            </a>
+                        </div>
+                        <div className="grid-itms2">
                             {/* <span className="save-text">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
                                     <path
