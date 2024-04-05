@@ -123,7 +123,7 @@ const MyForm = () => {
               <input type="text" className="form-control" id="courseName" name="courseName" value={formData.courseName} onChange={handleChange} required />
             </div>
             <div className="text-center">
-              <button type="submit" className="btn btn-primary">Submit</button>
+              <button type="submit" className="btn btn-primary">Apply now</button>
             </div>
           </form>
           {/* {submissionInfo.dateTime && (
