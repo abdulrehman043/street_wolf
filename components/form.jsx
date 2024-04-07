@@ -78,50 +78,126 @@ const MyForm = () => {
 
   return (
     <div className="container mt-5 text-bg-light">
+            {/* <img
+        src="/assets/logo/logo.png"
+        alt="Vidyarthiadda Logo"
+        style={{ width: '20%%', cursor: 'pointer' }}
+      /> */}
       <div className="row justify-content-center">
+
         <div className="col-md-8">
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
-              <label htmlFor="name" className="form-label">Name of the Student</label>
-              <input type="text" className="form-control" id="name" name="name" value={formData.name} onChange={handleChange} required />
+              <input
+                type="text"
+                className="form-control"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                placeholder="Name of the Student"
+              />
             </div>
+
             <div className="mb-3">
-              <label htmlFor="contactNumber" className="form-label">Contact Number</label>
-              <input type="tel" className="form-control" id="contactNumber" name="contactNumber" value={formData.contactNumber} onChange={handleChange} required />
+              <input
+                type="tel"
+                className="form-control"
+                id="contactNumber"
+                name="contactNumber"
+                value={formData.contactNumber}
+                onChange={handleChange}
+                required
+                placeholder="Contact Number"
+              />
             </div>
+
             <div className="mb-3">
-              <label htmlFor="email" className="form-label">Email</label>
-              <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} required />
+              <input
+                type="email"
+                className="form-control"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                placeholder="Email"
+              />
             </div>
+
             <div className="mb-3">
-              <label htmlFor="degree" className="form-label">Degree</label>
-              <select className="form-select" id="degree" name="degree" value={formData.degree} onChange={handleChange} required>
+              <select
+                className="form-select"
+                id="degree"
+                name="degree"
+                value={formData.degree}
+                onChange={handleChange}
+                required
+              >
                 <option value="" disabled>Select Degree</option>
                 <option value="Bachelors">Bachelor's</option>
                 <option value="Masters">Master's</option>
                 <option value="PhD">PhD</option>
               </select>
             </div>
+
             {formData.degree === 'Bachelors' && (
               <>
                 <div className="mb-3">
-                  <label htmlFor="parentName" className="form-label">Parent's Name</label>
-                  <input type="text" className="form-control" id="parentName" name="parentName" value={formData.parentName} onChange={handleChange} required />
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="parentName"
+                    name="parentName"
+                    value={formData.parentName}
+                    onChange={handleChange}
+                    required
+                    placeholder="Parent's Name"
+                  />
                 </div>
+
                 <div className="mb-3">
-                  <label htmlFor="parentNumber" className="form-label">Parent's Contact Number</label>
-                  <input type="tel" className="form-control" id="parentNumber" name="parentNumber" value={formData.parentNumber} onChange={handleChange} required />
+                  <input
+                    type="tel"
+                    className="form-control"
+                    id="parentNumber"
+                    name="parentNumber"
+                    value={formData.parentNumber}
+                    onChange={handleChange}
+                    required
+                    placeholder="Parent's Contact Number"
+                  />
                 </div>
+
               </>
             )}
-                <div className="mb-3">
-                  <label htmlFor="currentLocation" className="form-label">Your city</label>
-                  <input type="text" className="form-control" id="currentLocation" name="currentLocation" value={formData.currentLocation} onChange={handleChange} required />
-                </div>
             <div className="mb-3">
-              <label htmlFor="courseName" className="form-label">Course Name</label>
-              <input type="text" className="form-control" id="courseName" name="courseName" value={formData.courseName} onChange={handleChange} required />
+              <input
+                type="text"
+                className="form-control"
+                id="currentLocation"
+                name="currentLocation"
+                value={formData.currentLocation}
+                onChange={handleChange}
+                required
+                placeholder="Your city"
+              />
             </div>
+
+            <div className="mb-3">
+              <input
+                type="text"
+                className="form-control"
+                id="courseName"
+                name="courseName"
+                value={formData.courseName}
+                onChange={handleChange}
+                required
+                placeholder="Course Name"
+              />
+            </div>
+
             <div className="text-center">
               <button type="submit" className="btn btn-primary">Apply now</button>
             </div>
