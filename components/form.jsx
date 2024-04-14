@@ -199,7 +199,7 @@ const MyForm = () => {
             </div>
 
             <div className="text-center">
-              <button type="submit" className="btn btn-primary">Apply now</button>
+              <button type="submit" className="btn btn-primary">Contact Me!</button>
             </div>
           </form>
           {/* {submissionInfo.dateTime && (
