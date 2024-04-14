@@ -55,10 +55,31 @@ const SliderMain = () => {
 
   return (
     <div>
-      <section className="banner-section wow fadeIn">
+<div id="carouselExampleSlidesOnly" onClick={openModal} className="carousel slide mobile_h" data-bs-ride="carousel" style={{ backgroundImage: 'url(/assets/background/get_sc.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      {/* Replace '...' with your background image source */}
+      <div className="d-block w-100" style={{ height: '500px', backgroundColor: 'rgba(0, 0, 0, 0.1)' }}>
+        {/* Add your content here */}
+      </div>
+    </div>
+  </div>
+
+  <style jsx>{`
+    @media (max-width: 767px) {
+      .mobile_h {
+        height: 144px;
+      }
+    }
+  `}</style>
+</div>
+
+
+
+      {/* <section className="banner-section wow fadeIn">
         <div className="swiper-container banner-slider">
           <div className="swiper-wrapper">
-            <div className="swiper-slide" style={{ backgroundImage: 'url(/assets/background/collegeonhome.jpg)' }}>
+            <div className="swiper-slide" style={{ backgroundImage: 'url(/assets/background/get_sc.png)' }}>
               <div className="content-outer">
                 <div className="content-box">
                   <div className="inner">
@@ -84,7 +105,7 @@ const SliderMain = () => {
         <div className="banner-shape__left_1"></div>
         <div className="banner-shape__left_2"></div>
         <div className="banner-big-title d-none d-md-block" data-parallax='{"x": 200}'>Vidyarthiadda</div>
-      </section>
+      </section> */}
       <Modal showModal={showModal} onClose={closeModal} />
     </div>
 
