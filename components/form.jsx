@@ -142,7 +142,7 @@ const MyForm = () => {
               </select>
             </div>
 
-            {formData.degree === 'Bachelors' && (
+            {/* {formData.degree === 'Bachelors' && (
               <>
                 <div className="mb-3">
                   <input
@@ -171,7 +171,7 @@ const MyForm = () => {
                 </div>
 
               </>
-            )}
+            )} */}
             <div className="mb-3">
               <input
                 type="text"

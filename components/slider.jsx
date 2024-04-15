@@ -59,7 +59,7 @@ const SliderMain = () => {
   <div className="carousel-inner">
     <div className="carousel-item active">
       {/* Replace '...' with your background image source */}
-      <div className="d-block w-100" style={{ height: '500px', backgroundColor: 'rgba(0, 0, 0, 0.1)' }}>
+      <div className="d-block w-100" style={{ height: '500px', backgroundColor: 'rgba(0, 0, 0, 0.04)' }}>
         {/* Add your content here */}
       </div>
     </div>
