@@ -10,7 +10,7 @@ const MyForm = () => {
     degree: '',
     parentName: '',
     parentNumber: '',
-    courseName: '',
+    course_name: '',
   });
 
   const [submissionInfo, setSubmissionInfo] = useState({
@@ -64,7 +64,7 @@ const MyForm = () => {
         degree: '',
         parentName: '',
         parentNumber: '',
-        courseName: '',
+        course_name: '',
       });
 
     } catch (error) {
@@ -77,72 +77,209 @@ const MyForm = () => {
   };
 
   return (
-    <div className="container mt-5 text-bg-light">
-            {/* <img
-        src="/assets/logo/logo.png"
-        alt="Vidyarthiadda Logo"
-        style={{ width: '20%%', cursor: 'pointer' }}
-      /> */}
-      <div className="row justify-content-center">
+    <>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
 
-        <div className="col-md-8">
-          <form onSubmit={handleSubmit}>
-            <div className="mb-3">
-              <input
-                type="text"
-                className="form-control"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                placeholder="Name of the Student"
-              />
-            </div>
+      <style jsx>
+        {`
+  .form_body {
+    background-color: #f9f9f9;
+  }
+  .registration-form-wrapper {
+    padding: 20px;
+  }
+  .registration-form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .form-heading {
+    color: #f8c246; /* Orange color for headings */
+    margin-bottom: 1rem;
+  }
+  .form-label {
+    font-weight: bold;
+  }
+  .form-input-icon {
+    position: relative;
+  }
+  .form-input-icon i {
+    position: absolute;
+    left: 10px;
+    top: 38px;
+    color: #6c757d;
+  }
+  .form-control {
+    padding-left: 2.5rem;
+  }
+  .form-select {
+    padding-left: 1.9rem;
+  }
+  .form-check-input:checked {
+    background-color: #f8c246; /* Orange color for checkbox */
+    border-color: #f8c246; /* Orange color for checkbox */
+  }
+  .btn-submit {
+    background-color: #f8c246; /* Orange color for submit button */
+    border: none;
+    width: 100%;
+  }
+  .btn-submit:hover {
+    background-color: #e56d04; /* Darker orange on hover */
+  }
+  .form-footer {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .form-footer a {
+    color: #f8c246;
+    text-decoration: none;
+  }
+  .form-footer a:hover {
+    text-decoration: underline;
+  }
 
-            <div className="mb-3">
-              <input
-                type="tel"
-                className="form-control"
-                id="contactNumber"
-                name="contactNumber"
-                value={formData.contactNumber}
-                onChange={handleChange}
-                required
-                placeholder="Contact Number"
-              />
-            </div>
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    .registration-form {
+      margin: auto;
+      max-width: 500px;
+    }
+  }
+`}
+      </style>
+      <div className="container form_body">
+        <div className="registration-form-wrapper">
 
-            <div className="mb-3">
-              <input
-                type="email"
-                className="form-control"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                placeholder="Email"
-              />
-            </div>
+          <div className="registration-form">
+            <h3 className="form-heading">Get a callback from experts!</h3>
+            <p>Free mentorship and admission assistance!</p>
 
-            <div className="mb-3">
-              <select
-                className="form-select"
-                id="degree"
-                name="degree"
-                value={formData.degree}
-                onChange={handleChange}
-                required
-              >
-                <option value="" disabled>Select Degree</option>
-                <option value="Bachelors">Bachelor's</option>
-                <option value="Masters">Master's</option>
-                <option value="PhD">PhD</option>
-              </select>
-            </div>
 
-            {/* {formData.degree === 'Bachelors' && (
+            <form onSubmit={handleSubmit}>
+              {/* <div className="mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  placeholder="Name of the Student"
+                />
+              </div> */}
+
+
+              <div className="mb-3 form-input-icon">
+                <i className="bi bi-person-fill"></i>
+                <label htmlFor="name" className="form-label">Full Name *</label>
+                <input type="text"
+                  className="form-control"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  placeholder="Name of the Student" />
+              </div>
+
+
+              {/* 
+              <div className="mb-3">
+                <input
+                  type="tel"
+                  className="form-control"
+                  id="contactNumber"
+                  name="contactNumber"
+                  value={formData.contactNumber}
+                  onChange={handleChange}
+                  required
+                  placeholder="Contact Number"
+                />
+              </div> */}
+
+
+              <div className="mb-3 form-input-icon">
+                <i className="bi bi-telephone-fill"></i>
+                <label htmlFor="contactNumber" className="form-label">Mobile Number *</label>
+                <input
+                  type="tel"
+                  className="form-control"
+                  id="contactNumber"
+                  name="contactNumber"
+                  value={formData.contactNumber}
+                  onChange={handleChange}
+                  required
+                  placeholder="Contact Number"
+                />
+              </div>
+
+
+              <div className="mb-3 form-input-icon">
+                <i className="bi bi-envelope-fill"></i>
+                <label htmlFor="email" className="form-label">Email Address *</label>
+                <input
+                  type="email"
+                  className="form-control"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  placeholder="Email"
+                />
+              </div>
+
+              {/* <div className="mb-3">
+                <select
+                  className="form-select"
+                  id="degree"
+                  name="degree"
+                  value={formData.degree}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="" disabled>Select Degree</option>
+                  <option value="Bachelors">Bachelor's</option>
+                  <option value="Masters">Master's</option>
+                  <option value="PhD">PhD</option>
+                </select>
+              </div> */}
+
+
+              
+              {
+              /* Need to fix later <div className="mb-3 form-input-icon">
+                <i className="bi bi-mortarboard-fill"></i>
+                <label htmlFor="degree" className="form-label">Course Interested In *</label>
+                <select className="form-select" id="degree" value={formData.degree}
+                  onChange={handleChange}
+                  required>
+                  {/* <option value="" disabled>Select Degree</option> 
+                  <option value="Bachelors">Bachelor's</option>
+                  <option value="Masters">Master's</option>
+                  <option value="PhD">PhD</option>
+                </select>
+              </div> */}
+
+              <div className="mb-3 form-input-icon">
+                <i className="bi bi-mortarboard-fill"></i>
+                <label htmlFor="courseName" className="form-label">Course Name *</label>
+                <input
+
+                  type="text"
+                  className="form-control"
+                  id="courseName"
+                  name="courseName"
+                  value={formData.courseName}
+                  onChange={handleChange}
+                  placeholder="Eg : MBA, B.Tech"
+                  required />
+              </div>
+              {/* {formData.degree === 'Bachelors' && (
               <>
                 <div className="mb-3">
                   <input
@@ -172,37 +309,38 @@ const MyForm = () => {
 
               </>
             )} */}
-            <div className="mb-3">
-              <input
-                type="text"
-                className="form-control"
-                id="currentLocation"
-                name="currentLocation"
-                value={formData.currentLocation}
-                onChange={handleChange}
-                required
-                placeholder="Your city"
-              />
-            </div>
+              {/* <div className="mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  id="currentLocation"
+                  name="currentLocation"
+                  value={formData.currentLocation}
+                  onChange={handleChange}
+                  required
+                  placeholder="Your city"
+                />
+              </div> */}
 
-            <div className="mb-3">
-              <input
-                type="text"
-                className="form-control"
-                id="courseName"
-                name="courseName"
-                value={formData.courseName}
-                onChange={handleChange}
-                required
-                placeholder="Course Name"
-              />
-            </div>
 
-            <div className="text-center">
-              <button type="submit" className="btn btn-primary">Contact Me!</button>
-            </div>
-          </form>
-          {/* {submissionInfo.dateTime && (
+              <div className="mb-3 form-input-icon">
+                <i className="bi bi-geo-alt-fill"></i>
+                <label htmlFor="currentLocation" className="form-label">City You Live In *</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="currentLocation"
+                  name="currentLocation"
+                  value={formData.currentLocation}
+                  onChange={handleChange}
+                  required
+                  placeholder="Your city"
+                />
+              </div>
+
+              <button type="submit" className="btn btn-submit">Submit</button>
+            </form>
+            {/* {submissionInfo.dateTime && (
             <div className="mt-3">
               <h5>Submission Information:</h5>
               <p>Date and Time: {submissionInfo.dateTime}</p>
@@ -210,28 +348,29 @@ const MyForm = () => {
               <p>User Agent: {submissionInfo.userAgent}</p>
             </div>
           )} */}
-          {showSuccessModal && (
-            <div className="modal fade show success-modal" tabIndex="-1" role="dialog" style={{ display: 'block' }}>
-              <div className="modal-dialog">
-                <div className="modal-content">
-                  <div className="modal-header bg-success text-white">
-                    <h5 className="modal-title">Success!</h5>
-                    <button type="button" className="btn-close text-white" onClick={closeModal}></button>
-                  </div>
-                  <div className="modal-body">
-                    <p>Your form has been submitted successfully. You will get a callback shortly.</p>
-                  </div>
-                  <div className="modal-footer">
-                    <button type="button" className="btn btn-success" onClick={closeModal}>Close</button>
+            {showSuccessModal && (
+              <div className="modal fade show success-modal" tabIndex="-1" role="dialog" style={{ display: 'block' }}>
+                <div className="modal-dialog">
+                  <div className="modal-content">
+                    <div className="modal-header bg-success text-white">
+                      <h5 className="modal-title">Success!</h5>
+                      <button type="button" className="btn-close text-white" onClick={closeModal}></button>
+                    </div>
+                    <div className="modal-body">
+                      <p>Your form has been submitted successfully. You will get a callback shortly.</p>
+                    </div>
+                    <div className="modal-footer">
+                      <button type="button" className="btn btn-success" onClick={closeModal}>Close</button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
 
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
