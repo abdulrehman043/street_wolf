@@ -20,7 +20,10 @@ const Modal = ({ showModal, onClose }) => {
                   <button type="button" className="btn-close" onClick={closeModal}></button>
                 </div>
                 <div className="modal-body text-bg-light">
-                  <MyForm closeModal={closeModal} />
+                
+                    
+                      <MyForm closeModal={closeModal} showModal={showModal} />
+                    
                 </div>
               </div>
             </div>

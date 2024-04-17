@@ -2,7 +2,7 @@ import "@styles/bs_53.css";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const MyForm = () => {
+const MyForm = ({ showModal }) => {
   const [formData, setFormData] = useState({
     name: '',
     contactNumber: '',
@@ -150,29 +150,12 @@ const MyForm = () => {
   }
 `}
       </style>
-      <div className="container form_body">
+      <div className={`${showModal ? "" : "container form_body"}`}>
         <div className="registration-form-wrapper">
-
-          <div className="registration-form">
+          <div className={`${showModal ? "" : "registration-form"}`}>
             <h3 className="form-heading">Get a callback from experts!</h3>
             <p>Free mentorship and admission assistance!</p>
-
-
             <form onSubmit={handleSubmit}>
-              {/* <div className="mb-3">
-                <input
-                  type="text"
-                  className="form-control"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  placeholder="Name of the Student"
-                />
-              </div> */}
-
-
               <div className="mb-3 form-input-icon">
                 <i className="bi bi-person-fill"></i>
                 <label htmlFor="name" className="form-label">Full Name *</label>
@@ -185,23 +168,6 @@ const MyForm = () => {
                   required
                   placeholder="Name of the Student" />
               </div>
-
-
-              {/* 
-              <div className="mb-3">
-                <input
-                  type="tel"
-                  className="form-control"
-                  id="contactNumber"
-                  name="contactNumber"
-                  value={formData.contactNumber}
-                  onChange={handleChange}
-                  required
-                  placeholder="Contact Number"
-                />
-              </div> */}
-
-
               <div className="mb-3 form-input-icon">
                 <i className="bi bi-telephone-fill"></i>
                 <label htmlFor="contactNumber" className="form-label">Mobile Number *</label>
@@ -216,8 +182,6 @@ const MyForm = () => {
                   placeholder="Contact Number"
                 />
               </div>
-
-
               <div className="mb-3 form-input-icon">
                 <i className="bi bi-envelope-fill"></i>
                 <label htmlFor="email" className="form-label">Email Address *</label>
@@ -232,44 +196,10 @@ const MyForm = () => {
                   placeholder="Email"
                 />
               </div>
-
-              {/* <div className="mb-3">
-                <select
-                  className="form-select"
-                  id="degree"
-                  name="degree"
-                  value={formData.degree}
-                  onChange={handleChange}
-                  required
-                >
-                  <option value="" disabled>Select Degree</option>
-                  <option value="Bachelors">Bachelor's</option>
-                  <option value="Masters">Master's</option>
-                  <option value="PhD">PhD</option>
-                </select>
-              </div> */}
-
-
-              
-              {
-              /* Need to fix later <div className="mb-3 form-input-icon">
-                <i className="bi bi-mortarboard-fill"></i>
-                <label htmlFor="degree" className="form-label">Course Interested In *</label>
-                <select className="form-select" id="degree" value={formData.degree}
-                  onChange={handleChange}
-                  required>
-                  {/* <option value="" disabled>Select Degree</option> 
-                  <option value="Bachelors">Bachelor's</option>
-                  <option value="Masters">Master's</option>
-                  <option value="PhD">PhD</option>
-                </select>
-              </div> */}
-
               <div className="mb-3 form-input-icon">
                 <i className="bi bi-mortarboard-fill"></i>
                 <label htmlFor="courseName" className="form-label">Course Name *</label>
                 <input
-
                   type="text"
                   className="form-control"
                   id="courseName"
@@ -279,50 +209,6 @@ const MyForm = () => {
                   placeholder="Eg : MBA, B.Tech"
                   required />
               </div>
-              {/* {formData.degree === 'Bachelors' && (
-              <>
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="parentName"
-                    name="parentName"
-                    value={formData.parentName}
-                    onChange={handleChange}
-                    required
-                    placeholder="Parent's Name"
-                  />
-                </div>
-
-                <div className="mb-3">
-                  <input
-                    type="tel"
-                    className="form-control"
-                    id="parentNumber"
-                    name="parentNumber"
-                    value={formData.parentNumber}
-                    onChange={handleChange}
-                    required
-                    placeholder="Parent's Contact Number"
-                  />
-                </div>
-
-              </>
-            )} */}
-              {/* <div className="mb-3">
-                <input
-                  type="text"
-                  className="form-control"
-                  id="currentLocation"
-                  name="currentLocation"
-                  value={formData.currentLocation}
-                  onChange={handleChange}
-                  required
-                  placeholder="Your city"
-                />
-              </div> */}
-
-
               <div className="mb-3 form-input-icon">
                 <i className="bi bi-geo-alt-fill"></i>
                 <label htmlFor="currentLocation" className="form-label">City You Live In *</label>
@@ -337,17 +223,8 @@ const MyForm = () => {
                   placeholder="Your city"
                 />
               </div>
-
               <button type="submit" className="btn btn-submit">Submit</button>
             </form>
-            {/* {submissionInfo.dateTime && (
-            <div className="mt-3">
-              <h5>Submission Information:</h5>
-              <p>Date and Time: {submissionInfo.dateTime}</p>
-              <p>IP Address: {submissionInfo.ipAddress}</p>
-              <p>User Agent: {submissionInfo.userAgent}</p>
-            </div>
-          )} */}
             {showSuccessModal && (
               <div className="modal fade show success-modal" tabIndex="-1" role="dialog" style={{ display: 'block' }}>
                 <div className="modal-dialog">
@@ -366,7 +243,6 @@ const MyForm = () => {
                 </div>
               </div>
             )}
-
           </div>
         </div>
       </div>
