@@ -17,14 +17,6 @@ const App = () => {
   return (
     <div>
       <NavBar />
-        <img
-        src="/assets/logo/logo.png"
-        alt="Vidyarthiadda Logo"
-        style={{ width: '17%', display : 'block', margin : 'auto' }}
-      />
-      <h3 className="text-center text-bg-light mt-4" style={{fontSize : '23px'}}>
-        Get free advice from experts! Fill the form and get a callback within 24 hours.
-      </h3>
       <MyForm />
       <Footer />
     </div>
