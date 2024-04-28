@@ -55,12 +55,13 @@ const SliderMain = () => {
 
   return (
     <div>
-<div id="carouselExampleSlidesOnly" onClick={openModal} className="carousel slide mobile_h" data-bs-ride="carousel" style={{ backgroundImage: 'url(/assets/background/get_sc.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+<div id="carouselExampleSlidesOnly" onClick={openModal} className="carousel slide mobile_h" data-bs-ride="carousel" style={{ backgroundImage: 'url(/assets/background/get_scholarship.png)', backgroundSize: 'cover', backgroundPosition: 'center', position: 'relative' }}>
   <div className="carousel-inner">
     <div className="carousel-item active">
       {/* Replace '...' with your background image source */}
       <div className="d-block w-100" style={{ height: '500px', backgroundColor: 'rgba(0, 0, 0, 0.04)' }}>
         {/* Add your content here */}
+        <button className="button-26 va_blue_bg" role="button">Contact us</button>
       </div>
     </div>
   </div>
@@ -70,9 +71,63 @@ const SliderMain = () => {
       .mobile_h {
         height: 144px;
       }
+      .button-26 {
+      position: absolute !important;
+      top: 19% !important;
+      left: 34% !important;
+      transform: translateX(-50%) !important;
+      }
+    }
+
+    .button-26 {
+      position: absolute;
+      top: 83%;
+      left: 34%;
+      transform: translateX(-50%);
+    }
+
+    .button-26 {
+      appearance: button;
+      border: 1px solid #1652F0;
+      border-radius: 4px;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      cursor: pointer;
+      font-family: Graphik,-apple-system,system-ui,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+      font-size: 14px;
+      line-height: 1.15;
+      overflow: visible;
+      padding: 12px 16px;
+      position: relative;
+      text-align: center;
+      text-transform: none;
+      transition: all 80ms ease-in-out;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      width: fit-content;
+    }
+
+    .button-26:disabled {
+      opacity: .5;
+    }
+
+    .button-26:focus {
+      outline: 0;
+    }
+
+    .button-26:hover {
+      background-color: #0A46E4;
+      border-color: #0A46E4;
+    }
+
+    .button-26:active {
+      background-color: #0039D7;
+      border-color: #0039D7;
     }
   `}</style>
 </div>
+
 
 
 
