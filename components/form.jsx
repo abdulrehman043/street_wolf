@@ -20,6 +20,7 @@ const MyForm = ({ showModal }) => {
   });
 
   const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [showErrorModal, setShowErrorModal] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -36,7 +37,7 @@ const MyForm = ({ showModal }) => {
       const ipAddress = ipAddressResponse.data.ip;
       const userAgent = navigator.userAgent;
 
-      const response = await axios.post('https://vidyarthiadda.in/user_data/insert', {
+      const response = await axios.post('https://vidyarthiadda.in/user_data/college_page_form', {
         ...formData,
         dateTime: formattedDate,
         ipAddress,
@@ -47,33 +48,45 @@ const MyForm = ({ showModal }) => {
         },
       });
 
-      console.log(JSON.stringify(response.data));
-      setSubmissionInfo({
-        dateTime: formattedDate,
-        ipAddress,
-        userAgent,
-      });
+      if (response.data.status == true) {
+        setSubmissionInfo({
+          dateTime: formattedDate,
+          ipAddress,
+          userAgent,
+        });
 
-      setShowSuccessModal(true);
+        // const closeButton = document.querySelector('.closeeee_modal');
+        // if (closeButton) {
+        //   closeButton.click();
+        // }
+        setShowSuccessModal(true);
 
-      // Optional: Reset the form fields after submission
-      setFormData({
-        name: '',
-        contactNumber: '',
-        email: '',
-        degree: '',
-        parentName: '',
-        parentNumber: '',
-        course_name: '',
-      });
-
+        // Optional: Reset the form fields after submission
+        setFormData({
+          name: '',
+          contactNumber: '',
+          email: '',
+          degree: '',
+          parentName: '',
+          parentNumber: '',
+          course_name: '',
+        });
+      } else {
+        setShowErrorModal(true);
+        // const closeButton = document.querySelector('.closeeee_modal');
+        // if (closeButton) {
+        //   closeButton.click();
+        // }
+      }
     } catch (error) {
       console.error(error);
+      setShowErrorModal(true);
     }
   };
 
   const closeModal = () => {
     setShowSuccessModal(false);
+    setShowErrorModal(false);
   };
 
   return (
@@ -238,6 +251,24 @@ const MyForm = ({ showModal }) => {
                     </div>
                     <div className="modal-footer">
                       <button type="button" className="btn btn-success" onClick={closeModal}>Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            {showErrorModal && (
+              <div className="modal fade show error-modal" tabIndex="-1" role="dialog" style={{ display: 'block' }}>
+                <div className="modal-dialog">
+                  <div className="modal-content">
+                    <div className="modal-header bg-danger text-white">
+                      <h5 className="modal-title">Error</h5>
+                      <button type="button" className="btn-close text-white" onClick={closeModal}></button>
+                    </div>
+                    <div className="modal-body">
+                      <p>Something went wrong. Please try again later.</p>
+                    </div>
+                    <div className="modal-footer">
+                      <button type="button" className="btn btn-danger" onClick={closeModal}>Close</button>
                     </div>
                   </div>
                 </div>
